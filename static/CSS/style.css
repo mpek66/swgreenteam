@@ -7,13 +7,13 @@ body{
   z-index: 0;
 }
 .active{
-  transition: all 10s cubic-bezier(0.000, 0.000, 0.230, 1) !important;
+  transition: all 1s cubic-bezier(0.000, 0.000, 0.230, 1) !important;
   background-position: 0% !important;
 }
 .header{
   text-decoration: none;
   text-align: center;
-  color: grey;
+  color: white;
   padding-top: 50px;
   font-size: 1.5em;
   font-weight: 800;
@@ -23,7 +23,7 @@ body{
     to right,
 	  limegreen,
   	limegreen 50%,
-	  grey 50%);
+	  white 50%);
 	background-size: 200% 100%;
   background-position: 100%;
   font-family: 'Indie Flower', cursive;
