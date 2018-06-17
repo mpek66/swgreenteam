@@ -15,7 +15,6 @@ body{
   text-align: center;
   color: white;
   padding-top: 50px;
-  font-size: 1.5em;
   font-weight: 800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,15 +30,25 @@ body{
 }
 .navbar{
   font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
-  z-index: 1;
+  position: sticky;
+  padding: 0;
+  z-index: 2;
 }
 #load_screen{
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: #fffdf7;
-  z-index: 1;
+  z-index: 10;
+}
+#load_screen img{
+  position: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25%;
+  width: 35%;
+  height: 35%;
 }
 #load{
   color: #23d15f;
@@ -49,43 +58,46 @@ body{
 
   z-index: 2;
 }
-/*
 @media (max-width:530px){
+  .header{
+    font-size: 1.5em;
+  }
   .navbar{
-    position: absolute;
     top: 240px;
     width: 100%;
     height: 55px;
-    background: #362f2a;
+    background: #fffdf7;
     border-top: 1px solid #786a5c;
     border-bottom: 1px solid #786a5c;
-    padding: 0;
   }
 }
 @media (min-width:530px) and (max-width:780px){
+  .header{
+    font-size: 2em;
+  }
   .navbar{
-    position: absolute;
-    top: 340px;
+    top: 250px;
     width: 100%;
     height: 55px;
-    background: #362f2a;
+    background: #fffdf7;
     border-top: 1px solid #786a5c;
     border-bottom: 1px solid #786a5c;
-    padding: 0;
   }
 }
 @media (min-width:780px){
+  .header{
+    font-size: 2.5em;
+  }
   .navbar{
-    position: absolute;
-    top: 445px;
+    top: 250px;
     width: 100%;
     height: 55px;
-    background: #362f2a;
+    background: #fffdf7;
     border-top: 1px solid #786a5c;
     border-bottom: 1px solid #786a5c;
-    padding: 0;
   }
 }
+/*
   .main p, .main iframe{
     display: block;
     margin-left: auto;
@@ -164,7 +176,13 @@ body{
     -webkit-appearance: none;
     cursor: pointer;
   }
-  .footer{
+
+  .symbol{
+    font-family: icons;
+    color: white;
+  }
+  */
+.footer{
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -176,15 +194,10 @@ body{
     border-top: 1px solid #444;
     z-index: 10;
   }
-  .footer p{
+.footer p{
     position: auto;
     display: inline-block;
     line-height: 10px;
     letter-spacing: 1px;
     font-size: 0.7em;
   }
-  .symbol{
-    font-family: icons;
-    color: white;
-  }
-  */
