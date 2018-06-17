@@ -15,7 +15,8 @@ body{
   text-align: center;
   color: white;
   padding-top: 50px;
-  font-size: 1.5em;
+  padding-left: 15px;
+  padding-right: 15px;
   font-weight: 800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -29,63 +30,106 @@ body{
   font-family: 'Indie Flower', cursive;
   z-index: 1;
 }
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .navbar{
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
-  z-index: 1;
+  padding: 0;
+  overflow: hidden;
+  background: #fffdf7;
+  border-top: 1px solid #786a5c;
+  border-bottom: 1px solid #786a5c;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+.navbar a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #bbb;
+  display: inline-block;
+  letter-spacing: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar a:hover{
+  color: #333;
 }
 #load_screen{
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: #fffdf7;
-  z-index: 1;
+  z-index: 10;
 }
-#load{
-  color: #23d15f;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 3em;
-
+#load_screen img{
+  position: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25%;
+  max-width: 200px;
+  max-height: 200px;
+}
+.contents{
+  position: auto;
+  background: transparent;
+  width: 94%;
+  height: auto;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin-left: 3%;
   z-index: 2;
 }
-/*
+.about{
+  font-family: 'Varela Round', sans-serif;
+}
 @media (max-width:530px){
+  .header{
+    font-size: 1.5em;
+  }
   .navbar{
-    position: absolute;
-    top: 240px;
-    width: 100%;
-    height: 55px;
-    background: #362f2a;
-    border-top: 1px solid #786a5c;
-    border-bottom: 1px solid #786a5c;
-    padding: 0;
+    top: 180px;
+  }
+  .navbar a{
+    font-size: 0.8em;
+    padding-right: 3px;
+    padding-left: 3px;
   }
 }
 @media (min-width:530px) and (max-width:780px){
+  .header{
+    font-size: 2em;
+  }
   .navbar{
-    position: absolute;
-    top: 340px;
-    width: 100%;
-    height: 55px;
-    background: #362f2a;
-    border-top: 1px solid #786a5c;
-    border-bottom: 1px solid #786a5c;
-    padding: 0;
+    top: 220px;
+  }
+  .navbar a{
+    font-size: 1em;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 @media (min-width:780px){
+  .header{
+    font-size: 2.5em;
+  }
   .navbar{
-    position: absolute;
-    top: 445px;
-    width: 100%;
-    height: 55px;
-    background: #362f2a;
-    border-top: 1px solid #786a5c;
-    border-bottom: 1px solid #786a5c;
-    padding: 0;
+    top: 220px;
+  }
+  .navbar a{
+    font-size: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
+/*
   .main p, .main iframe{
     display: block;
     margin-left: auto;
@@ -164,27 +208,50 @@ body{
     -webkit-appearance: none;
     cursor: pointer;
   }
-  .footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    font-family: 'Righteous', cursive;
-    color: white;
-    background: #222;
-    padding-top: 0;
-    border-top: 1px solid #444;
-    z-index: 10;
-  }
-  .footer p{
-    position: auto;
-    display: inline-block;
-    line-height: 10px;
-    letter-spacing: 1px;
-    font-size: 0.7em;
-  }
-  .symbol{
-    font-family: icons;
-    color: white;
-  }
   */
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  background: #333;
+  padding-top: 0;
+  border-top: 1px solid #444;
+  z-index: 5;
+}
+.footer p{
+  position: auto;
+  display: block;
+  margin-right: 30px;
+  display: inline-block;
+  line-height: 10px;
+  letter-spacing: 1px;
+  font-size: 0.7em;
+}
+.footer b{
+  margin-left: 3%;
+  display: block;
+  position: auto;
+  display: inline-block;
+  line-height: 10px;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+.footer a{
+  position: auto;
+  display: block;
+  padding-left: 5px;
+  text-decoration: none;
+  color: rgb(102,51,153);
+  text-shadow:
+		-0.5px -0.5px 0 #fff,
+		0.5px -0.5px 0 #fff,
+		-0.5px 0.5px 0 #fff,
+		0.5px 0.5px 0 #fff;
+  display: inline-block;
+  line-height: 10px;
+  letter-spacing: 1px;
+  font-size: 0.7em;
+}
