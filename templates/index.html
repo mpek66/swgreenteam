@@ -9,26 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="../static/CSS/style.css" type="text/css">
     <script type="text/javascript">
-    var page_loaded = "no";
     //----------------------Loading Screen-------//
     window.addEventListener("load", function(){
       var load_screen = document.getElementById("load_screen");
       setTimeout(function(){
       document.body.removeChild(load_screen);
-      page_loaded = "yes";
+      $('.header').addClass('active');
       }, 700);
-    });
-    $(document).ready(function(){
-      if (page_loaded = "yes"){
-        $('.header').addClass('active');
-      }
     });
     </script>
   </head>
   <body>
     <div id="load_screen">
       <div id="load">
-        <p>•IMG•</p>
+        <img src="../images/green-leaf-icon.jpg">
       </div>
     </div>
 
@@ -38,6 +32,14 @@
       </h1>
     </div>
     <div class="navbar">
+      <div class="container">
+        <ul>
+         <a id="home">Home</a>
+         <a id="events" href="#">Upcoming Events</a>
+         <a id="members" href="#">Members</a>
+         <a id="contact" href="#">Contact Us</a>
+       </ul>
+      </div>
     </div>
     <div class="contents">
     </div>
