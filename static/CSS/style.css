@@ -15,6 +15,8 @@ body{
   text-align: center;
   color: white;
   padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-weight: 800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,6 +39,9 @@ body{
   border-bottom: 1px solid #786a5c;
   z-index: 2;
 }
+.navbar a{
+  text-decoration: none;
+}
 #load_screen{
   width: 100%;
   height: 100%;
@@ -53,20 +58,25 @@ body{
   max-width: 200px;
   max-height: 200px;
 }
-#load{
-  color: #23d15f;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 3em;
-
+.contents{
+  position: auto;
+  background: transparent;
+  width: 94%;
+  height: auto;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin-left: 3%;
   z-index: 2;
+}
+.about{
+  font-family: 'Varela Round', sans-serif;
 }
 @media (max-width:530px){
   .header{
     font-size: 1.5em;
   }
   .navbar{
-    top: 240px;
+    top: 200px;
     width: 100%;
     height: 55px;
   }
@@ -190,13 +200,16 @@ body{
 }
 .footer p{
   position: auto;
+  display: block;
+  margin-right: 30px;
   display: inline-block;
   line-height: 10px;
   letter-spacing: 1px;
   font-size: 0.7em;
 }
 .footer b{
-  padding-left: 3%;
+  margin-left: 3%;
+  display: block;
   position: auto;
   display: inline-block;
   line-height: 10px;
@@ -205,7 +218,15 @@ body{
 }
 .footer a{
   position: auto;
+  display: block;
+  padding-left: 5px;
   text-decoration: none;
+  color: rgb(102,51,153);
+  text-shadow:
+		-0.5px -0.5px 0 #fff,
+		0.5px -0.5px 0 #fff,
+		-0.5px 0.5px 0 #fff,
+		0.5px 0.5px 0 #fff;
   display: inline-block;
   line-height: 10px;
   letter-spacing: 1px;
