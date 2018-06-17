@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Southest Green Team - {{page}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="../static/CSS/style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      history.pushState({html: "{{html}}"}, "{{page}}", "{{url}}");
+      $("#body").append({{html}});
+    });
+    // loading screen
+    window.addEventListener("load", function(){
+      $("#body").removeChild("load_screen");
+      $(".header").addClass("active");
+    });
+    // navigation helping
+    window.onpopstate = function(event){
+      backto(event.state);
+    };
+    </script>
+  </head>
+  <body id="body">
+
+    <button onclick="goto('trial')">Test</button>
+    <div id="load_screen">
+      <div id="load">
+        <img src="../images/green-leaf-icon.jpg">
+      </div>
+    </div>
+
+    <script>
+    // shit to help the spa
+
+    // better way of going to a page
+    function goto(location){
+      $.getJSON("/load_page/",{goal: location},
+        function(response){
+          history.pushState({test: "yes"}, response.page, response.url);
+          document.title = "Southwest Green Team - " + response.page;
+          $("#body").html(response.html);
+        }
+      );
+    }
+
+    // handles a browser nav button press
+    function backto(state){
+      $("#body").html(state.html);
+    }
+    </script>
+  </body>
+</html>
