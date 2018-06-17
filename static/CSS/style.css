@@ -6,8 +6,8 @@ body{
   background: #fffdf7;
   z-index: 0;
 }
-.header active{
-  transition: all 1s cubic-bezier(0.000, 0.000, 0.230, 1) !important;
+.active{
+  transition: all 10s cubic-bezier(0.000, 0.000, 0.230, 1) !important;
   background-position: 0% !important;
 }
 .header{
@@ -49,8 +49,9 @@ body{
 
   z-index: 2;
 }
+/*
 @media (max-width:530px){
-  .navbox{
+  .navbar{
     position: absolute;
     top: 240px;
     width: 100%;
@@ -60,12 +61,9 @@ body{
     border-bottom: 1px solid #786a5c;
     padding: 0;
   }
-  .main{
-    top: 295px;
-  }
 }
 @media (min-width:530px) and (max-width:780px){
-  .navbox{
+  .navbar{
     position: absolute;
     top: 340px;
     width: 100%;
@@ -75,12 +73,9 @@ body{
     border-bottom: 1px solid #786a5c;
     padding: 0;
   }
-  .main{
-    top: 395px;
-  }
 }
 @media (min-width:780px){
-  .navbox{
+  .navbar{
     position: absolute;
     top: 445px;
     width: 100%;
@@ -90,10 +85,7 @@ body{
     border-bottom: 1px solid #786a5c;
     padding: 0;
   }
-  .main{
-    top: 495px;
-  }}
-  /*
+}
   .main p, .main iframe{
     display: block;
     margin-left: auto;
