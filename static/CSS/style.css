@@ -30,17 +30,36 @@ body{
   font-family: 'Indie Flower', cursive;
   z-index: 1;
 }
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .navbar{
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  position: sticky;
   padding: 0;
+  overflow: hidden;
   background: #fffdf7;
   border-top: 1px solid #786a5c;
   border-bottom: 1px solid #786a5c;
+  width: 100%;
+  height: auto;
   z-index: 2;
 }
 .navbar a{
+  cursor: pointer;
   text-decoration: none;
+  color: #bbb;
+  display: inline-block;
+  letter-spacing: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar a:hover{
+  color: #333;
 }
 #load_screen{
   width: 100%;
@@ -76,9 +95,12 @@ body{
     font-size: 1.5em;
   }
   .navbar{
-    top: 200px;
-    width: 100%;
-    height: 55px;
+    top: 180px;
+  }
+  .navbar a{
+    font-size: 0.8em;
+    padding-right: 3px;
+    padding-left: 3px;
   }
 }
 @media (min-width:530px) and (max-width:780px){
@@ -86,9 +108,12 @@ body{
     font-size: 2em;
   }
   .navbar{
-    top: 250px;
-    width: 100%;
-    height: 55px;
+    top: 220px;
+  }
+  .navbar a{
+    font-size: 1em;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 @media (min-width:780px){
@@ -96,9 +121,12 @@ body{
     font-size: 2.5em;
   }
   .navbar{
-    top: 250px;
-    width: 100%;
-    height: 55px;
+    top: 220px;
+  }
+  .navbar a{
+    font-size: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 /*
@@ -179,11 +207,6 @@ body{
     color: #85adcb;
     -webkit-appearance: none;
     cursor: pointer;
-  }
-
-  .symbol{
-    font-family: icons;
-    color: white;
   }
   */
 .footer{
